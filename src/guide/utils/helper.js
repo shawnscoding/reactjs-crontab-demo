@@ -59,14 +59,8 @@ export const getTzVariableText = (value) => {
     case 'default':
       val = `const timeZone = 'UTC'`
       break
-    case 'local':
-      val = `const timeZone = '${value}'`
-      break
-    case 'UTC':
-      val = `const timeZone = 'UTC'`
-      break
     default:
-      val = `const timeZone = { set: '${value}' }`
+      val = `const timeZone = '${value}'`
       break
   }
   return val

@@ -8,7 +8,7 @@ import {
 
 const codeBoxTemplate = (savedSelects, tzValue) => {
   return `import React from 'react'
-import { BasicCron } from 'reactjs-crontab'
+import Crontab from 'reactjs-crontab'
 import 'reactjs-crontab/dist/index.css'
 //copy and paste this code and run!
     
@@ -24,7 +24,7 @@ ${getTzVariableText(tzValue)}
     
 const App = () => {
     return (
-      <BasicCron 
+      <Crontab 
         tasks={tasks}
         timeZone={timeZone}
         dashboard={settings}
