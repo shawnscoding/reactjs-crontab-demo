@@ -1,6 +1,21 @@
 {
   "name": "reactjs-crontab-demo",
-  "version": "0.1.0",
+  "description": "Demo and Guide website for reactjs-crontab node package",
+  "version": "1.0.0",
+  "author": "shawnscoding",
+  "license": "MIT",
+  "keywords": [
+    "react",
+    "crontab",
+    "cron",
+    "react cron",
+    "reactjs-crontab",
+    "reactjs-crontab demo website",
+    "react crontab",
+    "demo",
+    "demo website",
+    "guide"
+  ],
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.11.0",
