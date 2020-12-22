@@ -10,7 +10,7 @@ import {
 import { ASTERISK } from '../utils/types'
 
 const getHRtime = (config) => {
-  const splittedConfig = config.split('-')
+  const splittedConfig = config.split(' ')
   const convertedConfig = splittedConfig.map((item) => {
     const obj = converConfigValuesToObject(item)
     return obj
@@ -112,7 +112,7 @@ const getHRtime = (config) => {
 const TextFieldForm = ({ select, handleSave, timeZone }) => {
   const value = convertToCronSyntax(select)
   const res = getHRtime(value)
-  const isSelected = value !== '*-*-*-*-*'
+  const isSelected = value !== '* * * * *'
 
   return (
     <React.Fragment>

@@ -57,18 +57,18 @@ export const getTzVariableText = (value) => {
   let val
   switch (value) {
     case 'default':
-      val = `const timeZone = 'UTC'`
+      val = `'UTC'`
       break
     default:
-      val = `const timeZone = '${value}'`
+      val = `'${value}'`
       break
   }
   return val
 }
 
 export const convertToCronSyntax = (select) => {
-  let res = `*-*-*-*-*`
-  const splitted = res.split('-')
+  let res = `* * * * *`
+  const splitted = res.split(' ')
   const { min, hour, dow, dom, mon } = select
   if (min !== '*') {
     splitted[0] = min
@@ -86,7 +86,7 @@ export const convertToCronSyntax = (select) => {
     splitted[4] = dow
   }
 
-  res = splitted.join('-')
+  res = splitted.join(' ')
 
   return res
 }

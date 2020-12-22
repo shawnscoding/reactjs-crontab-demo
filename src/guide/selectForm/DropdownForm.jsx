@@ -19,7 +19,7 @@ const DropdownForm = ({
   }
 
   const res = convertToCronSyntax(select)
-  const splitted = res.split('-')
+  const splitted = res.split(' ')
   const min = splitted[0] !== '*'
   const hour = splitted[1] !== '*'
   const dom = splitted[2] !== '*'

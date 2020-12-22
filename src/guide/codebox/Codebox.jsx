@@ -15,19 +15,13 @@ import 'reactjs-crontab/dist/index.css'
 ${getDefaultFnsWithSavedSelects(savedSelects)}
     
 ${convertSavedSelectsToProps(savedSelects)}
-
-const settings = {
-  hidden: false
-}
-
-${getTzVariableText(tzValue)}
     
 const App = () => {
     return (
       <Crontab 
         tasks={tasks}
-        timeZone={timeZone}
-        dashboard={settings}
+        timeZone=${getTzVariableText(tzValue)}
+        dashboard={{ hidden: false }}
       />
     )
 }
